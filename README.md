@@ -1,16 +1,27 @@
-## Hi there 👋
+# Rafael Gonzaga
 
-<!--
-**RafaelVieiraGonzaga/RafaelVieiraGonzaga** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### Full Stack Developer | SaaS Builder | AI Integrations
 
-Here are some ideas to get you started:
+I build digital products, SaaS platforms, and intelligent automations. I turn real business challenges into scalable solutions by combining software engineering, thoughtful design, and AI.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Tech stack
+
+- **Frontend:** React, Next.js, TypeScript, Tailwind CSS
+- **Backend:** Python, Flask, Node.js
+- **Databases:** PostgreSQL, MySQL, Supabase
+- **AI & automation:** LLMs, APIs, workflow automation, and integrations
+
+## Selected projects
+
+### LeadScan
+A SaaS platform for intelligent lead prospecting and qualification.
+
+### [Rômulo Moissanite](https://github.com/openspaceoficial/Romulo-moisannite)
+An e-commerce platform for precious stones, with commercial integrations and catalog management.
+
+### [AutoFlow](https://github.com/RafaelVieiraGonzaga/AutoFlow)
+An AI-powered system for customer service automation.
+
+## Contact
+
+- **Portfolio:** [rafaelvieiragonzaga.github.io/Portifolio](https://rafaelvieiragonzaga.github.io/Portifolio/index.html)
