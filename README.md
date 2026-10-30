@@ -32,4 +32,4 @@ An AI-powered system for customer service automation.
 
 ## Contact
 
-- **Portfolio:** [rafaelvieiragonzaga.github.io/Portifolio](https://rafaelvieiragonzaga.github.io/Portifolio/index.html)
+
