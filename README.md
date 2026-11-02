@@ -13,7 +13,7 @@ I build digital products, SaaS platforms, and intelligent automations. I turn re
 
 ## Selected projects
 
-### LeadScan
+### [leadScan] ].(https://github.com/gzgcontato-ops/LeadScan1)
 A SaaS platform for intelligent lead prospecting and qualification.
 
 ### [Rômulo Moissanite](https://github.com/openspaceoficial/Romulo-moisannite)
