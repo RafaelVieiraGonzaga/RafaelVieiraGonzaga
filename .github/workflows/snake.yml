@@ -9,7 +9,7 @@ on:
       - main
     paths:
       - ".github/workflows/snake.yml"
-      - ".github/scripts/generate-snake.mjs"
+      - ".github/scripts/generate-snake.mjs/generate-snake.mjs"
 
 permissions:
   contents: write
@@ -20,10 +20,8 @@ jobs:
     steps:
       - name: Check out profile repository
         uses: actions/checkout@v4
-
       - name: Generate growing contribution snake
-        run: node .github/scripts/generate-snake.mjs
-
+        run: node .github/scripts/generate-snake.mjs/generate-snake.mjs
       - name: Publish generated SVGs
         uses: peaceiris/actions-gh-pages@v4
         with:
