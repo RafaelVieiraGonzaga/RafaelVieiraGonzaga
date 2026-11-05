@@ -1,13 +1,21 @@
 # Rafael Gonzaga
 
 
+
+
 ### Full Stack Developer | SaaS Builder | AI Integrations
+
+
 
 
 I build digital products, SaaS platforms, and intelligent automations. I turn real business challenges into scalable solutions by combining software engineering, thoughtful design, and AI.
 
 
+
+
 ## Tech stack
+
+
 
 
 - **Frontend:** React, Next.js, TypeScript, Tailwind CSS
@@ -16,33 +24,53 @@ I build digital products, SaaS platforms, and intelligent automations. I turn re
 - **AI & automation:** LLMs, APIs, workflow automation, and integrations
 
 
+
+
 ## Selected projects
+
+
 
 
 ### [LeadScan.ia](https://github.com/gzgcontato-ops/LeadScan1)
 A SaaS platform for intelligent lead prospecting and qualification.
 
 
+
+
 ### [Rômulo Moissanite](https://github.com/openspaceoficial/Romulo-moisannite)
 An e-commerce platform for precious stones, with commercial integrations and catalog management.
+
+
 
 
 ### [AutoFlow](https://github.com/RafaelVieiraGonzaga/AutoFlow)
 An AI-powered system for customer service automation.
 
 
+
+
 ## Contribution activity
 
 
+
+
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RafaelVieiraGonzaga/RafaelVieiraGonzaga/output/github-contribution-grid-snake-dark.svg?galaxy=1" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RafaelVieiraGonzaga/RafaelVieiraGonzaga/output/github-contribution-grid-snake.svg?galaxy=1" />
-  <img alt="Animated galaxy of GitHub contributions" src="https://raw.githubusercontent.com/RafaelVieiraGonzaga/RafaelVieiraGonzaga/output/github-contribution-grid-snake.svg?galaxy=1" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RafaelVieiraGonzaga/RafaelVieiraGonzaga/output/contribution-galaxy-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RafaelVieiraGonzaga/RafaelVieiraGonzaga/output/contribution-galaxy.svg" />
+  <img alt="Animated galaxy of GitHub contributions" src="https://raw.githubusercontent.com/RafaelVieiraGonzaga/RafaelVieiraGonzaga/output/contribution-galaxy.svg" />
 </picture>
+
+
 
 
 ## Portifolio
 https://gzg-web-blond.vercel.app/
+
+
+
+
+
+
 
 
 
