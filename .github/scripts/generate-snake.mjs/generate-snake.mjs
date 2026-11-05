@@ -19,18 +19,18 @@ days.sort((a,b) => a.date.localeCompare(b.date));
 if (days.length < 360) throw new Error("Incomplete calendar: " + days.length);
 const total = days.reduce((s,d) => s+d.count, 0);
 const active = days.filter(d => d.count > 0);
-function city(dark) {
-  const bg = dark ? "#0d1117" : "#f6f8fa", fg = dark ? "#e6edf3" : "#24292f";
-  const base = 180, width = 800, margin = 24, slot = 752 / days.length;
-  const buildings = days.map((d,i) => {
-    if (!d.count) return "";
-    const h = Math.min(112, 12 + Math.sqrt(d.count) * 17), x = (margin+i*slot).toFixed(2), y = (base-h).toFixed(2), delay = (i/days.length*8).toFixed(2);
-    const color = ["#238636", "#2ea043", "#3fb950", "#56d364"][Math.min(3, Math.floor(Math.log2(d.count+1)))];
-    return '<g><title>'+d.date+': '+d.count+' contributions</title><rect x="'+x+'" y="'+y+'" width="'+Math.max(1.5,slot-0.25).toFixed(2)+'" height="'+h.toFixed(2)+'" rx="0.6" fill="'+color+'"><animate attributeName="height" from="0" to="'+h.toFixed(2)+'" begin="'+delay+'s" dur="1s" fill="freeze"/><animate attributeName="y" from="'+base+'" to="'+y+'" begin="'+delay+'s" dur="1s" fill="freeze"/></rect></g>';
-  }).join("");
-  let stars = ""; for(let i=0;i<35;i++){ const x=28+(i*127)%744, y=55+(i*53)%65; stars += '<circle cx="'+x+'" cy="'+y+'" r="'+(i%3===0?1.4:0.7)+'" fill="'+(dark?'#8b949e':'#b7c3ce')+'" opacity="0.55"/>'; }
-  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" role="img" aria-label="Contribution city: '+total+' contributions in the last year"><rect width="800" height="220" rx="12" fill="'+bg+'"/><text x="24" y="30" fill="'+fg+'" font-family="Arial,sans-serif" font-size="16" font-weight="bold">CONTRIBUTION CITY</text><text x="776" y="30" text-anchor="end" fill="'+(dark?'#8b949e':'#57606a')+'" font-family="Arial,sans-serif" font-size="12">'+total+' contributions · '+active.length+' active days</text>'+stars+'<circle cx="738" cy="66" r="16" fill="'+(dark?'#f2cc60':'#ffd966')+'" opacity="0.85"/>'+buildings+'<path d="M24 181 H776" stroke="'+(dark?'#30363d':'#d0d7de')+'" stroke-width="2"/><text x="24" y="204" fill="'+(dark?'#8b949e':'#57606a')+'" font-family="Arial,sans-serif" font-size="11">One building per active day · height reflects contributions</text><text x="776" y="204" text-anchor="end" fill="'+(dark?'#8b949e':'#57606a')+'" font-family="Arial,sans-serif" font-size="11">LAST 12 MONTHS</text></svg>';
+function galaxy(dark) {
+  const bg = dark ? "#0d1117" : "#10152b", fg = "#eef3ff";
+  const stars = active.map((d,i) => {
+    const angle = i * 2.39996, radius = 12 + 135 * Math.sqrt((i+1)/Math.max(1,active.length));
+    const x = 400 + Math.cos(angle)*radius*2.1, y = 134 + Math.sin(angle)*radius*0.62;
+    return { ...d, x:x.toFixed(1), y:y.toFixed(1), r:Math.min(4.2,1.2+Math.sqrt(d.count)*0.55).toFixed(1), delay:(i/Math.max(1,active.length)*7).toFixed(2) };
+  });
+  const lines = stars.map((s,i) => i && i%7!==0 ? '<line x1="'+stars[i-1].x+'" y1="'+stars[i-1].y+'" x2="'+s.x+'" y2="'+s.y+'" stroke="#8eaeff" stroke-opacity=".18" stroke-width=".7"/>' : '').join('');
+  const dots = stars.map(s => '<g><title>'+s.date+': '+s.count+' contributions</title><circle cx="'+s.x+'" cy="'+s.y+'" r="'+(Number(s.r)*2.5).toFixed(1)+'" fill="#7b9fff" opacity=".1"/><circle cx="'+s.x+'" cy="'+s.y+'" r="'+s.r+'" fill="'+(s.count>9?'#fff0af':'#d3e2ff')+'"><animate attributeName="opacity" values=".4;1;.4" dur="3s" begin="'+s.delay+'s" repeatCount="indefinite"/></circle></g>').join('');
+  let dust=''; for(let i=0;i<75;i++){ const x=20+(i*137)%760, y=44+(i*59)%166; dust += '<circle cx="'+x+'" cy="'+y+'" r=".6" fill="#aabfff" opacity=".35"/>'; }
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" role="img" aria-label="Contribution galaxy: '+total+' contributions in the last year"><defs><radialGradient id="g"><stop stop-color="#493982"/><stop offset="1" stop-color="#10152b"/></radialGradient></defs><rect width="800" height="250" rx="12" fill="'+bg+'"/><ellipse cx="400" cy="140" rx="310" ry="95" fill="url(#g)" opacity=".75"/>'+dust+'<text x="24" y="30" fill="'+fg+'" font-family="Arial,sans-serif" font-size="16" font-weight="bold">CONTRIBUTION GALAXY</text><text x="776" y="30" text-anchor="end" fill="#b8c5e5" font-family="Arial,sans-serif" font-size="12">'+total+' contributions · '+active.length+' active days</text>'+lines+dots+'<text x="24" y="229" fill="#b8c5e5" font-family="Arial,sans-serif" font-size="11">Each star represents an active day · brightness reflects contributions</text><text x="776" y="229" text-anchor="end" fill="#b8c5e5" font-family="Arial,sans-serif" font-size="11">LAST 12 MONTHS</text></svg>';
 }
 await mkdir("dist", {recursive:true});
-await Promise.all([writeFile("dist/github-contribution-grid-snake.svg",city(false)),writeFile("dist/github-contribution-grid-snake-dark.svg",city(true))]);
-console.log("Generated contribution city:", total, "contributions across", days.length, "days");
+await Promise.all([writeFile("dist/github-contribution-grid-snake.svg",galaxy(false)),writeFile("dist/github-contribution-grid-snake-dark.svg",galaxy(true))]);
+console.log("Generated contribution galaxy:", total, "contributions across", days.length, "days");
