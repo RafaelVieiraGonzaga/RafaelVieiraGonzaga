@@ -87,6 +87,6 @@ to turn real business challenges into useful experiences.
 ---
 
 <p align="center">
-  <strong>Let's turn the next idea into something useful. hoje o menor que chutou lata está chutadão de porshe</strong><br />
+  <strong>Let's turn the next idea into something useful.</strong><br />
   <a href="https://gzg-web-blond.vercel.app/">Explore my work</a> · <a href="https://github.com/RafaelVieiraGonzaga?tab=repositories">Explore my repositories</a>
 </p>
