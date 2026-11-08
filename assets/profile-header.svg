@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="322" viewBox="0 0 800 322" role="img" aria-labelledby="title desc">
+  <title id="title">Rafael Gonzaga</title>
+  <desc id="desc">Full Stack Developer and SaaS Builder. A teal orbital monogram on a midnight blue background.</desc>
+
+  <defs>
+    <linearGradient id="background" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#101e32"/>
+      <stop offset=".58" stop-color="#0b1424"/>
+      <stop offset="1" stop-color="#101c32"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#1a5463" stop-opacity=".66"/>
+      <stop offset="1" stop-color="#152d46" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="orbit" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop stop-color="#6e95d1" stop-opacity=".38"/>
+      <stop offset=".57" stop-color="#7af1df"/>
+      <stop offset="1" stop-color="#6e95d1" stop-opacity=".44"/>
+    </linearGradient>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#6e92bb" stroke-opacity=".15"/>
+    </pattern>
+    <clipPath id="frame">
+      <rect width="800" height="322" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="800" height="322" fill="url(#background)"/>
+    <circle cx="622" cy="157" r="189" fill="url(#glow)"/>
+    <rect x="470" y="21" width="309" height="280" rx="15" fill="url(#grid)" stroke="#31465f"/>
+    <path d="M44 268H444" stroke="#334861"/>
+
+    <g transform="translate(622 160)">
+      <circle r="99" fill="none" stroke="#567398" stroke-opacity=".52" stroke-dasharray="2 7"/>
+      <circle r="82" fill="none" stroke="#567398" stroke-opacity=".48"/>
+      <path d="M-116 0h232M0-116v232" stroke="#6381a6" stroke-opacity=".32"/>
+      <ellipse rx="124" ry="51" transform="rotate(-32)" fill="none" stroke="url(#orbit)" stroke-width="1.8"/>
+      <ellipse rx="112" ry="49" transform="rotate(31)" fill="none" stroke="#7395ca" stroke-opacity=".44"/>
+      <circle cx="105" cy="-66" r="5" fill="#91f7e5"/>
+      <circle cx="93" cy="59" r="3.5" fill="#9abaff"/>
+      <rect x="-55" y="-49" width="110" height="98" rx="24" fill="#101e32" stroke="#6bd5cf" stroke-opacity=".63"/>
+      <text x="0" y="16" text-anchor="middle" fill="#ddfff8" font-family="Segoe UI, Arial, sans-serif" font-size="47" font-weight="700" letter-spacing="-2">RG</text>
+    </g>
+
+    <g font-family="Segoe UI, Arial, sans-serif">
+      <circle cx="50" cy="49" r="5" fill="#7af1df"/>
+      <text x="66" y="55" fill="#a3f2e7" font-size="17" font-weight="700" letter-spacing="2">ENGINEERING / DESIGN / AI</text>
+      <text x="41" y="133" fill="#f4f8ff" font-size="72" font-weight="700" letter-spacing="-3">Rafael</text>
+      <text x="41" y="204" fill="#f4f8ff" font-size="72" font-weight="700" letter-spacing="-3">Gonzaga<tspan fill="#7af1df">.</tspan></text>
+      <text x="45" y="245" fill="#d2dff0" font-size="27">Full Stack Developer · SaaS Builder</text>
+      <text x="45" y="296" fill="#a5bdd7" font-size="17" font-weight="600" letter-spacing=".55">Ideas into products. Code into impact.</text>
+    </g>
+  </g>
+  <rect x=".75" y=".75" width="798.5" height="320.5" rx="23.25" fill="none" stroke="#354d69" stroke-width="1.5"/>
+</svg>

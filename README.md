@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/RafaelVieiraGonzaga/RafaelVieiraGonzaga/output/profile-header.svg" width="100%" alt="Rafael Gonzaga — Full Stack Developer · SaaS Builder" />
+  <img src="./assets/profile-header.svg" width="100%" alt="Rafael Gonzaga — Full Stack Developer · SaaS Builder" />
 </p>
 
 <p align="center">
